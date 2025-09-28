@@ -1,4 +1,4 @@
-package task1;
+package aqa.course.task2;
 
 public class Main {
 //V 8: StringBuilder

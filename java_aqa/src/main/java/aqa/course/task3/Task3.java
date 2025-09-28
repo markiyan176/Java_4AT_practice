@@ -1,4 +1,4 @@
-package aqa.course.task_3;
+package aqa.course.task3;
 import java.util.*;
 public class Task3 {
 
