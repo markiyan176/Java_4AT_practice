@@ -1,55 +1,38 @@
 package aqa.course.task10;
 
-import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-//1. Set up ChromeDriver using the driver file and properties.
-//2. Set up ChromeDriver using DriverManager.
-//3. Navigate to the page assigned to your variant.
-//4. Select any three different elements.
-//5. Interact with all the selected elements.
-//        6. Verify the visibility of each element using assertions.
-//        7. Wrap all these steps into a TestNG test case.
-
-
-
-
 public class Task10 {
     public static void main(String[] args) throws InterruptedException {
 
+        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        System.setProperty("webdriver.chrome.driver",
-                "driver/chromedriver");
-//        options.addArguments("--headless=new");
-
-        ChromeDriverManager.getInstance().setup();
         WebDriver driver = new ChromeDriver(options);
+
         driver.get("https://www.demoblaze.com/prod.html?idp_=1");
+        Thread.sleep(1000);
 
+        WebElement addToCartButton = driver.findElement(By.xpath("//a[@onclick='addToCart(1)']"));
+        WebElement homeLink = driver.findElement(By.id("nava"));
+        WebElement productTitle = driver.findElement(By.xpath("//h2[@class='name']"));
 
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        assert addToCartButton.isDisplayed() : "Add to Cart button is not visible!";
+        assert homeLink.isDisplayed() : "Home link is not visible!";
+        assert productTitle.isDisplayed() : "Product title is not visible!";
 
-        WebElement addToCardButton = driver.findElement(By.xpath("//a[@onclick=\"addToCart(1)\"]"));
-        addToCardButton.click();
+        addToCartButton.click();
+        Thread.sleep(1000);
 
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        homeLink.click();
+        Thread.sleep(1000);
 
+        System.out.println("Product title text: " + productTitle.getText());
 
         driver.quit();
-
-
-
     }
 }
