@@ -121,7 +121,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "removeLabel",
 			"request": {
 				"method": "DELETE",
 				"header": [],
