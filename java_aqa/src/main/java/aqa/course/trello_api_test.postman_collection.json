@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "76f40168-429e-463e-aa8f-b00907b3960f",
+		"name": "trello_api_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32966731"
+	},
+	"item": [
+		{
+			"name": "createLabel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/9uijWt5G/labels?name=a&color=blue&key=963f2a1741fe202f96acf78e1e3eff14&token=ATTA1d6632dbf947f289aae647b319db3c977ee18df87b99ff5d398f74b712d87aff65E49794",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"9uijWt5G",
+						"labels"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "a"
+						},
+						{
+							"key": "color",
+							"value": "blue"
+						},
+						{
+							"key": "key",
+							"value": "963f2a1741fe202f96acf78e1e3eff14"
+						},
+						{
+							"key": "token",
+							"value": "ATTA1d6632dbf947f289aae647b319db3c977ee18df87b99ff5d398f74b712d87aff65E49794"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addLabel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/dwVAq9Iq/idLabels?key=963f2a1741fe202f96acf78e1e3eff14&token=ATTA1d6632dbf947f289aae647b319db3c977ee18df87b99ff5d398f74b712d87aff65E49794&value=68f614e3a247d78b58d2efc6",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"dwVAq9Iq",
+						"idLabels"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "963f2a1741fe202f96acf78e1e3eff14"
+						},
+						{
+							"key": "token",
+							"value": "ATTA1d6632dbf947f289aae647b319db3c977ee18df87b99ff5d398f74b712d87aff65E49794"
+						},
+						{
+							"key": "value",
+							"value": "68f614e3a247d78b58d2efc6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateName",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/labels/68f614e3a247d78b58d2efc6?key=963f2a1741fe202f96acf78e1e3eff14&token=ATTA1d6632dbf947f289aae647b319db3c977ee18df87b99ff5d398f74b712d87aff65E49794&name=b",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"labels",
+						"68f614e3a247d78b58d2efc6"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "963f2a1741fe202f96acf78e1e3eff14"
+						},
+						{
+							"key": "token",
+							"value": "ATTA1d6632dbf947f289aae647b319db3c977ee18df87b99ff5d398f74b712d87aff65E49794"
+						},
+						{
+							"key": "name",
+							"value": "b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards/dwVAq9Iq/idLabels/68f627403c9e1a5a006aad04?key=963f2a1741fe202f96acf78e1e3eff14&token=ATTA1d6632dbf947f289aae647b319db3c977ee18df87b99ff5d398f74b712d87aff65E49794",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"dwVAq9Iq",
+						"idLabels",
+						"68f627403c9e1a5a006aad04"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "963f2a1741fe202f96acf78e1e3eff14"
+						},
+						{
+							"key": "token",
+							"value": "ATTA1d6632dbf947f289aae647b319db3c977ee18df87b99ff5d398f74b712d87aff65E49794"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
